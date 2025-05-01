@@ -1,11 +1,15 @@
 import { NavLink } from "react-router";
 import Logo from "../assets/Images/Logo 1.png"
 import Button from "./ui/Button";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar: React.FC = () => {
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+ 
     return (
-        <nav className="bg-transparent w-full px-4  text-white absolute z-10">
-            <div className="max-w-7xl mx-26 flex items-center justify-between">
+        <nav className="absolute bg-transparent w-full px-4  text-white z-10">
+            <div className="max-w-7xl md:mx-26 flex items-center justify-between">
 
                 <div className="flex shrink-0">
                     <NavLink to="/" >
@@ -22,10 +26,14 @@ const NavBar: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="">
-                    <Button variant="secondary" size="md" className="cursor-pointer">Donate</Button>
+                <div className="hidden md:block">
+                    <Button variant="secondary" size="md" className="cursor-pointer">Donate Now</Button>
                 </div>
-
+                
+                <div className="md:hidden flex cursor-pointer transition ease-linear duration-300" onClick={() => setShowMenu(prev => !prev)}>
+                    {showMenu ? <FaTimes /> : <FaBars />}
+                </div>
+                
             </div>
 
         </nav>
