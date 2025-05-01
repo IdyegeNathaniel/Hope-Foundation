@@ -1,5 +1,8 @@
+import Herocard from "./components/Herocard"
 import Hero from "./components/Hero"
 import NavBar from "./components/NavBar"
+import Cause from "./components/Cause"
+import Blogs from "./components/Blogs"
 
 
 const App: React.FC = () => {
@@ -7,6 +10,9 @@ const App: React.FC = () => {
     <>
       <NavBar />
       <Hero />
+      <Herocard />
+      <Cause />
+      <Blogs />
     </>
   )
 }
