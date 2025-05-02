@@ -30,6 +30,13 @@ interface ImagesType {
     IMG6: string,   
 }
 
+
+interface BlogType {
+    title: string,
+    image: string,
+    tag: string,   
+    timeframe: string,
+}
 //IMAGES
 export const images: ImagesType = {
     IMG1,
@@ -90,5 +97,46 @@ export const CauseItems: CauseType[] = [
         image: IMG2,
         title: "Healthcare Access",
         tag: 'Ensuring communities have access to essential healthcare services and medical supplies.',
+    },
+]
+
+export const blogStories: BlogType[] = [
+    {
+        title: "Compassion in action: How You Can Make a Difference",
+        image: IMG6,
+        tag: "Jessica Sigha",
+        timeframe: "Feb 2024 . 3 mins read",
+    },
+    {
+        title: "From Local to Global: The Ripple Effects of Charity",
+        image: IMG6,
+        tag: "Jessica Sigha",
+        timeframe: "Feb 2024 . 3 mins read",
+    },
+    {
+        title: "Giving is Receiving: The Mutual Benefits of Giving",
+        image: IMG6,
+        tag: "Jessica Sigha",
+        timeframe: "Feb 2024 . 3 mins read",
+    },
+    {
+        title: "Unlocking Generosity: The Impact of Your Contribution",
+        image: IMG6,
+        tag: "Jessica Sigha",
+        timeframe: "Feb 2024 . 3 mins read",
+    },
+    
+    {
+        title: "Charity Starts Here: Simplr Ways to Get Invovlved",
+        image: IMG6,
+        tag: "Jessica Sigha",
+        timeframe: "Feb 2024 . 3 mins read",
+    },
+    
+    {
+        title: "Join the Movement: Together We Can Make a Difference",
+        image: IMG6,
+        tag: "Jessica Sigha",
+        timeframe: "Feb 2024 . 3 mins read",
     },
 ]
