@@ -4,7 +4,7 @@ import { cardDets } from "../assets/assets"
 const Herocard: React.FC = () => {
   return (
     <section className="w-full my-5 ">
-      <div className="container-xl lg:container flex items-center justify-center">
+      <div className="container-xl lg:container flex items-center justify-center mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-4">
           
           {
