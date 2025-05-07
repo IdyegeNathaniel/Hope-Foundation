@@ -1,21 +1,19 @@
-import { InputHTMLAttributes } from "react"
+import { ChangeEvent, InputHTMLAttributes } from "react"
 
-type InputVariant = 'primary' | 'secondary'
-
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
-    variant?: InputVariant,
-     
-
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  placeholder?: string,
+  label?: string,
+  error?: string,
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-
-
-
-const Input:React.FC<InputProps> = ({children}) => {
+const Input: React.FC<InputProps> = ({ placeholder, label, error, onChange, className='', ...props }) => {
   return (
-    <input>
-        {children}
-    </input>
+    <div>
+      {label && <label htmlFor="props.id">{label}</label>}
+      <input placeholder={placeholder} className={className} {...props}/>
+      {error && <p>{error}</p>}
+    </div>
   )
 }
 
