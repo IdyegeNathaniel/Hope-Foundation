@@ -7,10 +7,7 @@ const Footer: React.FC = () => {
         <div className="">
           <h1 className="font-medium text-xl mb-5">H❤PE FOUNDATION</h1>
           <p className="w-full md:w-2/3 text-sm text-neutral-500 leading-6 text-justify">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Making a difference in communities around the world through sustainable development and empowerment.
           </p>
         </div>
         {/* MIDDLE */}
@@ -33,10 +30,10 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className="mx-26">
+      <div className="mx-5 md:mx-20">
         <hr />
-        <h4 className="py-5 text-center text-sm text-neutral-400">
-          Copyright 2025 - The BarberPlace.
+        <h4 className="py-5 text-center text-base text-neutral-400">
+          ©Copyright 2025 - HOPE FOUNDATION.
         </h4>
       </div>
     </footer>

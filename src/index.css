@@ -110,3 +110,6 @@
     font-style: italic;
 }
 
+::-webkit-scrollbar{
+    @apply hidden
+}
