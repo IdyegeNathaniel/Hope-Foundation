@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
                     <div className="flex gap-7 text-xl font-medium">
                         {
                             ["Home", "Our Cause", "Blogs", "About Us", "Contact"].map((item, index) => (
-                                <NavLink to={index === 0 ? "/" : `/${item.toLowerCase().replace(" ", "-")}`} key={index} className="hover:text-orange-400">{item}</NavLink>
+                                <NavLink to={index === 0 ? "/" : `/${item.toLowerCase().replace(" ", "-")}`} key={index} className={({ isActive }) => `${ isActive ? "text-orange-400" : "hover:text-orange-300"}`}>{item}</NavLink>
                             ))
                         }
                     </div>
@@ -30,9 +30,20 @@ const NavBar: React.FC = () => {
                     <Button variant="secondary" size="md" className="cursor-pointer">Donate Now</Button>
                 </div>
                 
-                <div className="md:hidden flex cursor-pointer transition ease-linear duration-300" onClick={() => setShowMenu(prev => !prev)}>
-                    {showMenu ? <FaTimes /> : <FaBars />}
+                <div className="md:hidden flex cursor-pointer transition ease-linear duration-300 z-50" onClick={() => setShowMenu(prev => !prev)}>
+                    {showMenu ? <FaTimes className="h-6.5 w-6.5" /> : <FaBars />}
                 </div>
+                    <div className={showMenu ? "bg-black w-full h-screen absolute top-0 right-0 flex flex-col items-center justify-center gap-8 text-xl font-medium" : "hidden"}>
+                        {
+                            ["Home", "Our Cause", "Blogs", "About Us", "Contact"].map((item, index) => (
+                                <NavLink to={index === 0 ? "/" : `/${item.toLowerCase().replace(" ", "-")}`} key={index} className={({ isActive }) => `${isActive ? "text-orange-400" : "hover:text-orange-300"}`}>{item}</NavLink>
+                            ))
+                        }
+                        <div className="mt-5">
+                            <Button variant="secondary" size="lg" className="cursor-pointer">Donate Now</Button>
+                        </div>
+                    </div>
+                
                 
             </div>
 

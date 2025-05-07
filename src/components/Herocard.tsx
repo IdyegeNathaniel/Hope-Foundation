@@ -3,9 +3,9 @@ import { cardDets } from "../assets/assets"
 
 const Herocard: React.FC = () => {
   return (
-    <section className="w-full my-5 ">
-      <div className="container-xl lg:container flex items-center justify-center mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-4">
+    <section className="w-full my-5 md:flex hidden">
+      <div className="max-w-7xl flex items-center justify-center mx-auto">
+        <div className="grid md:grid-cols-4 gap-8 p-4">
           
           {
             cardDets.map((item, index) => (
