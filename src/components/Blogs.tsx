@@ -19,7 +19,7 @@ const Blogs: React.FC = () => {
                   <h2 className="font-bold text-lg">{story.title}</h2>
                   <img src={story.image} alt="" className="grayscale-50" />
                   <div className="flex items-center">
-                    <img src={Profile} alt="profile" className="w-14 h-14 rounded-full mr-5" />
+                    <img src={Profile} alt="profile" className="w-10 h-10 rounded-full mr-5" />
                     <div className="flex flex-col">
                       <p className="font-medium text-lg">{story.tag}</p>
                       <p className="text-neutral-500 text-sm">{story.timeframe}</p>
