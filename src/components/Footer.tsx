@@ -31,8 +31,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="mx-5 md:mx-20">
-        <hr />
-        <h4 className="py-5 text-center text-base text-neutral-400">
+        <hr className="border border-neutral-700" />
+        <h4 className="py-5 text-center text-base text-neutral-300">
           ©Copyright 2025 - HOPE FOUNDATION.
         </h4>
       </div>

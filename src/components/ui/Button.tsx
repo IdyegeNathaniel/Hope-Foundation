@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const baseStyling = 'font-medium rounded focus:outline-none transition-colors duration-200'
   const variantStyling = {
-    primary: "text-sm border border-white hover:border-amber-400 text-white hover:text-amber-400 rounded-full cursor-pointer",
+    primary: "border border-white hover:border-amber-400 text-white hover:text-amber-400 rounded-full cursor-pointer",
     secondary: "bg-orange-600 text-white hover:bg-orange-400 focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 rounded-full cursor-pointer",
     outline: "cursor-pointer",
   };
