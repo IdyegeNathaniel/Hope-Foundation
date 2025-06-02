@@ -2,11 +2,14 @@ import { useState } from "react"
 import { CauseItems } from "../assets/assets"
 import Button from "./ui/Button"
 import { motion } from "framer-motion"
+import { useNavigate } from "react-router"
 
 
 
 const Cause = () => {
   const [viewMore, setViewMore] = useState<boolean>(false)
+
+  const navigate = useNavigate() 
   return (
     <section className="bg-neutral-50 w-full p-4 ">
       <div
@@ -24,7 +27,7 @@ const Cause = () => {
             has access to basic needs, education, and opportunities for a better future. For over 15 years, we've been working tirelessly to empower communities and drive sustainable change.</p>
         </motion.div>
 
-        <div className="flex flex-col justify-center items-center py-20">
+        <div className="flex flex-col justify-center items-center py-10">
           <div className="grid md:grid-cols-3 gap-8 mx-auto mb-10">
             {
               CauseItems.slice(3).map((item, index) => (
@@ -33,7 +36,7 @@ const Cause = () => {
                   <div className="flex flex-col gap-2 py-4 px-4">
                     <h2 className="font-bold text-orange-600 text-xl mb-2">{item.title}</h2>
                     <p className="text-sm font-semibold text-neutral-700 h-15 mb-2">{item.tag}</p>
-                    <Button size="md" variant="secondary" className="inline-block">Donate</Button>
+                    <Button size="md" variant="secondary" className="inline-block" onClick={() => navigate("#donate")}>Donate</Button>
                   </div>
                 </div>
               ))

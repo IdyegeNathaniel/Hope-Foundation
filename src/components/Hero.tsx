@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
   
   
   return (
-    <section className="w-full h-screen border-b border-amber-600 relative text-white" style={backgroundStyle}>
+    <section className="w-full h-screen flex flex-col items-center justify-center border-b border-amber-600 relative text-white" style={backgroundStyle}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
         <motion.div initial="hidden" animate="visible" variants={containerVariants} className="flex flex-col gap-3 text-center mt-10 py-20">
           <h1 className={mainStyling}>Small Effort<br />Make Big Changes</h1>
