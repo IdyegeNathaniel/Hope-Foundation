@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Button from "./ui/Button"
-import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
+import { useFlutterwave } from 'flutterwave-react-v3';
 import { FlutterwaveConfig } from "flutterwave-react-v3/dist/types";
 
 const Donate: React.FC = () => {
@@ -23,7 +23,7 @@ const Donate: React.FC = () => {
     payment_options: 'card,mobilemoney,ussd',
     customer: {
       email,
-      phone_number: phone,
+      phonenumber: phone,
       name,
     },
     customizations: {
@@ -60,8 +60,6 @@ const Donate: React.FC = () => {
                       alert("Successful")
                       console.log(response);
                     }
-
-                    closePaymentModal() // this will close the modal programmatically
                   },
                   onClose: () => { },
                 });
