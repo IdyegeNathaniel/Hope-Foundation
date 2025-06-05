@@ -11,10 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
-    "axios": "^1.9.0",
-    "flutterwave-react-v3": "^1.0.7",
     "framer-motion": "^12.15.0",
-    "motion": "^12.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
@@ -34,11 +31,10 @@
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.5"
   },
-
   "overrides": {
-      "flutterwave-react-v3": {
-        "react": "$react",
-        "react-dom": "$react-dom"
-      }
+    "flutterwave-react-v3": {
+      "react": "$react",
+      "react-dom": "$react-dom"
     }
+  }
 }
