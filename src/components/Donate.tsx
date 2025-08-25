@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import Button from "./ui/Button"
 import { useFlutterwave } from 'flutterwave-react-v3';
 import { FlutterwaveConfig } from "flutterwave-react-v3/dist/types";
@@ -12,18 +12,18 @@ const Donate: React.FC = () => {
 
   const inputStyling = "bg-white text-xm mb-2 w-auto md:w-full p-2 outline-2 outline-neutral-300 rounded-md"
 
+  
   // FLUTTER GATEWAY
 
-
   const config: FlutterwaveConfig = {
-    public_key: import.meta.env.NEXT_PUBLIC_FLUTTER_API_KEY,
+    public_key: import.meta.env.VITE_FLUTTER_API_KEY,
     tx_ref: Date.now().toString(),
     amount,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     customer: {
       email,
-      phonenumber: phone,
+      phone_number: phone,
       name,
     },
     customizations: {
@@ -42,9 +42,9 @@ const Donate: React.FC = () => {
         <p className="text-gray-500 text-sm md:text-lg text-center w-full md:w-1/2">Help Further Our Reach to All in Need...</p>
 
         <div className="bg-orange-200 py-8 px-6 m-4 md:m-0">
-          <form  className="flex flex-col gap-y-2">
+          <form  className="flex flex-col gap-y-2" onSubmit={(e: React.FormEvent) => { e.preventDefault() } }>
             <div className="flex flex-col md:flex-row gap-5 items-center justify-center w-full ">
-              <input type="mail" value={email} placeholder="Enter Email Address" onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)} className={inputStyling} required />
+              <input type="email" value={email} placeholder="Enter Email Address" onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)} className={inputStyling} required />
               <input type="tel" value={phone} placeholder="Enter Phone Number" onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPhone(event.target.value)} className={inputStyling} required />
             </div>
             <input type="text" value={name} placeholder="Enter Full Name" onChange={(event: React.ChangeEvent<HTMLInputElement>) => setName(event.target.value)} className={inputStyling} required />
