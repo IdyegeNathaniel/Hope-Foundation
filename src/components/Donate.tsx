@@ -16,7 +16,7 @@ const Donate: React.FC = () => {
   // FLUTTER GATEWAY
 
   const config: FlutterwaveConfig = {
-    public_key: import.meta.env.VITE_FLUTTER_API_KEY,
+    public_key: import.meta.env.VITE_FLUTTER_API_KEY || '',
     tx_ref: Date.now().toString(),
     amount,
     currency: 'NGN',
