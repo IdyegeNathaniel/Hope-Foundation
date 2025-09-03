@@ -40,8 +40,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button disabled={disabled || isLoading} className={buttonStyling} {...rest}>
-      {isLoading && <span className='inline-block animate-pulse'>Loading....</span>}
-      {children}
+      {isLoading ? <span className='inline-block animate-pulse'>Loading....</span> : (children )}
     </button>
   )
 }
