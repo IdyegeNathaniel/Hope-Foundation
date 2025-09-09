@@ -1,6 +1,7 @@
 import Profile from "../assets/Images/profile_pic.png"
 import { blogStories } from "../assets/assets";
 import { motion } from "framer-motion";
+import Button from "./ui/Button";
 
 
 const Blogs: React.FC = () => {
@@ -23,7 +24,7 @@ const Blogs: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto mb-10">
 
             {
-              blogStories.map((story, index) => (
+              blogStories.slice(3).map((story, index) => (
                 <motion.div 
                 initial={{opacity: 0, y: 100}}
                 whileInView={{opacity: 1, y: 0}}
@@ -43,6 +44,7 @@ const Blogs: React.FC = () => {
             }
 
           </div>
+          <Button variant="outline" size="lg" className="border border-orange-500 rounded-full text-orange-500" >Read More</Button>
            </div>
       </div>
     </section>
