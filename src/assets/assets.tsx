@@ -56,7 +56,7 @@ export const cardDets: CardDetsType[] = [
     },
     {
         number: "100+",
-        name: "Kids Rehabilitated",
+        name: "Kids Rehabilitaed",
     },
     {
         number: "300",

@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
     }, [])
 
     return (
-        <nav className={`fixed w-full px-4  text-white z-10 ${scrolled ? "bg-neutral-300 bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
+        <nav className={`fixed w-full px-4  text-white z-10 ${scrolled && "bg-black/30 backdrop-blur-sm shadow-sm" }`}>
             <div className="max-w-7xl md:mx-26 flex items-center justify-between">
 
                 <div className="flex shrink-0">

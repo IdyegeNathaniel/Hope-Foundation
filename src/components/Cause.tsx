@@ -19,7 +19,7 @@ const Cause = () => {
         <motion.div 
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2.5 }}
+          transition={{ duration: 1 }}
           className="flex flex-col gap-2 items-start justify-start">
           <h1 className="text-5xl mb-2 font-bold">Our Cause</h1>
 

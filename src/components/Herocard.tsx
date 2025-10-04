@@ -16,7 +16,7 @@ const Herocard: React.FC = () => {
               <motion.div 
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 2.5}}
+                transition={{ duration: 1.5}}
                  key={index} className="flex flex-col gap-2 w-full  py-4 px-2 rounded-md shadow-md shadow-gray-700">
                 <h1 className="text-4xl font-semibold text-orange-600">{item.number}</h1>
                 <p className="text-2xl">{item.name}</p>
