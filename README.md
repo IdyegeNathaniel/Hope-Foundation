@@ -1,54 +1,102 @@
-# React + TypeScript + Vite
+# Hope Foundation Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page for charitable organizations with integrated payment processing capabilities. Built to make donations simple, secure, and accessible.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project provides a complete landing page solution for charity foundations and non-profit organizations. It features an elegant design that tells your story, showcases your impact, and makes it easy for supporters to contribute through a seamless payment experience powered by Flutterwave.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Modern Landing Page** - Clean, professional design that builds trust and encourages donations
+* **Secure Payment Integration** - Flutterwave payment gateway for safe and reliable transactions
+* **Multiple Payment Methods** - Support for cards, bank transfers, mobile money, and more
+* **Responsive Design** - Optimized experience across all devices and screen sizes
+* **Type-Safe Codebase** - Built with TypeScript for reliability and maintainability
+* **Fast Performance** - Optimized React components for quick load times
+* **Donation Tracking** - Real-time donation processing and confirmation
 
+## Getting Started
+
+* Node.js 16.x or higher
+* npm or yarn
+* Flutterwave account 
+
+## Installation
+
+1. Clone the repository
+ 
 ```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+git clone https://github.com/IdyegeNathaniel/Hope-Foundation.git
+cd Hope-Foundation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies
 
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+npm install
+ or
+yarn install
 ```
+
+3. Create a env file in the root directory and add your Flutterwave credentials
+
+```js
+REACT_APP_FLUTTERWAVE_PUBLIC_KEY=your_public_key_here
+REACT_APP_FLUTTERWAVE_SECRET_KEY=your_secret_key_here
+```
+
+4. Start the development server
+
+```js
+npm start
+ or
+yarn start
+```
+
+5. Open http://localhost:3000 in your browser
+
+## Configuration
+Create and setup a flutterwave account.
+
+## Building for Production
+
+```js
+npm run build
+ or
+yarn build
+```
+
+## Payment Flow
+
+1. User selects donation amount or enters custom amount
+2. User clicks "Donate Now" button
+3. Flutterwave payment modal opens
+4. User completes payment using preferred method
+5. Payment confirmation and receipt sent to user
+6. Success page displays with thank you message
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch 
+5. Open a Pull Request
+
+## Acknowledgments
+
+* Payment processing by Flutterwave
+* Built with React and Tailwind CSS
+
+## Support
+For issues and questions:
+
+* Open an issue on GitHub
+* Contact: idyegenathaniel@gmail.com
+
+---
+
+## Built with ❤️ for making a difference
